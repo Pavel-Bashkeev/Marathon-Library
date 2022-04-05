@@ -33,9 +33,6 @@ yarn-error.log*
 # vercel
 .vercel
 #files
-package-lock.json
-gulpfile.js
-package.json
 *.log
 *.rar
 *.zip
