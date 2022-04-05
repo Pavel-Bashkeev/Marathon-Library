@@ -1,0 +1,8 @@
+h1.title{
+  font-size: 21px;
+  color: rgb(0, 255, 34);
+  .subtitle{
+    font-size: 10px;
+  }
+}
+@import './components/title';
