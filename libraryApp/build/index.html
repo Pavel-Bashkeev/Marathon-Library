@@ -1,0 +1,375 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>BLB | Онлайн Библиотека</title>
+  <link rel="stylesheet" href="./css/main.min.css">
+</head>
+
+<body>
+  <section class="section library">
+  <header class="header library__header">
+    <div class="continaer library__container">
+      <div class="logo">
+        <svg id="eye" width="38" height="28" viewBox="0 0 38 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <path id="top-eyelid" d="M1.75848 18.8602C7.53334 12.3797 22.4031 3.32933 35.6835 18.9716" stroke="#FF9533"
+            stroke-width="1.4" stroke-linecap="round" />
+          <path id="bottom-eyelid" d="M1.75848 18.4145C7.53334 24.895 22.4031 33.9453 35.6835 18.3031" stroke="#FF9533"
+            stroke-width="1.4" stroke-linecap="round" />
+          <g id="pupil">
+            <circle cx="18.8046" cy="18.8044" r="5.92902" stroke="#FF9533" stroke-width="1.4" />
+            <circle cx="18.6931" cy="18.8044" r="2.80948" stroke="#FF9533" stroke-width="1.4" />
+          </g>
+          <g id="eyelashes">
+            <path
+              d="M1.17977 8.8804C0.898246 8.61544 0.455234 8.62886 0.190272 8.91038C-0.0746893 9.1919 -0.0612647 9.63492 0.220257 9.89988L1.17977 8.8804ZM0.220257 9.89988L3.06126 12.5738L4.02077 11.5543L1.17977 8.8804L0.220257 9.89988Z"
+              fill="#FF9533" />
+            <path
+              d="M6.11353 4.63466C5.88688 4.32147 5.44925 4.25132 5.13606 4.47797C4.82287 4.70462 4.75272 5.14225 4.97937 5.45544L6.11353 4.63466ZM4.97937 5.45544L8.0432 9.68909L9.17736 8.86832L6.11353 4.63466L4.97937 5.45544Z"
+              fill="#FF9533" />
+            <path
+              d="M13.0711 1.73233C12.9644 1.36074 12.5767 1.146 12.2051 1.2527C11.8335 1.35939 11.6188 1.74711 11.7255 2.11869L13.0711 1.73233ZM11.7255 2.11869L13.341 7.745L14.6866 7.35863L13.0711 1.73233L11.7255 2.11869Z"
+              fill="#FF9533" />
+            <path
+              d="M19.5601 0.693637C19.5566 0.307054 19.2404 -0.0034847 18.8538 2.96987e-05C18.4672 0.00354409 18.1567 0.319781 18.1602 0.706364L19.5601 0.693637ZM18.1602 0.706364L18.2159 6.83403L19.6158 6.8213L19.5601 0.693637L18.1602 0.706364Z"
+              fill="#FF9533" />
+            <path
+              d="M25.9959 1.72531C26.1007 1.35318 25.884 0.966575 25.5119 0.8618C25.1397 0.757026 24.7531 0.97376 24.6483 1.34589L25.9959 1.72531ZM24.3805 7.46303L25.9959 1.72531L24.6483 1.34589L23.0329 7.08361L24.3805 7.46303Z"
+              fill="#FF9533" />
+            <path
+              d="M32.6946 5.21945C32.914 4.90113 32.8338 4.46523 32.5155 4.24585C32.1971 4.02646 31.7612 4.10667 31.5419 4.42499L32.6946 5.21945ZM31.5419 4.42499L28.7008 8.54724L29.8536 9.3417L32.6946 5.21945L31.5419 4.42499Z"
+              fill="#FF9533" />
+            <path
+              d="M37.267 9.63093C37.5538 9.3717 37.5761 8.92904 37.3169 8.64224C37.0577 8.35543 36.615 8.33307 36.3282 8.5923L37.267 9.63093ZM36.3282 8.5923L33.4315 11.2105L34.3703 12.2491L37.267 9.63093L36.3282 8.5923Z"
+              fill="#FF9533" />
+            <path
+              d="M0.393597 13.7211C0.108909 13.9827 0.0901581 14.4255 0.351715 14.7102C0.613272 14.9948 1.05609 15.0136 1.34078 14.752L0.393597 13.7211ZM36.3324 14.4811C36.6213 14.738 37.0638 14.7121 37.3207 14.4232C37.5776 14.1343 37.5516 13.6918 37.2627 13.4349L36.3324 14.4811ZM1.34078 14.752C4.22834 12.0991 9.46695 8.88448 15.7366 7.91213C21.9733 6.94487 29.2568 8.18929 36.3324 14.4811L37.2627 13.4349C29.8548 6.84755 22.1441 5.50164 15.522 6.52866C8.93281 7.55058 3.44801 10.9149 0.393597 13.7211L1.34078 14.752Z"
+              fill="#FF9533" />
+          </g>
+        </svg>
+
+        <p class="logo__text">
+          Big Lab Book
+        </p>
+      </div>
+      <div class="header__btn-wrapper">
+        <button class="header-btn header-btn--add btn-add btn-reset">
+          <svg class="header-btn__icon header-btn__icon--add" width="28" height="28" viewBox="0 0 28 28">
+            <rect x="13.34" y="1.01993" width="0.44" height="25.96" fill="white" stroke="white" stroke-width="0.44" />
+            <rect x="1.01999" y="13.7799" width="0.44" height="25.96" transform="rotate(-90 1.01999 13.7799)"
+              fill="white" stroke="white" stroke-width="0.44" />
+          </svg>
+          <span class="btn-add__text">Добавить книгу</span>
+        </button>
+      </div>
+      <div class="header__search">
+  <button class="header-btn header-btn--saerch search-btn" aria-label="Поиск книги">
+    <svg class="header-btn__icon header-btn__icon--search" width="24" height="24" viewBox="0 0 24 24">
+      <path
+        d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
+        fill="white" />
+    </svg>
+  </button>
+</div>
+    </div>
+  </header>
+  . <div class="library__actions">
+    <h1 class="library__title">
+      Моя библиотека
+    </h1>
+    <p class="library__counts">
+      3 книги
+    </p>
+    <div class="library__filters filters">
+      <div class="filters__item filter--sort filter">
+        <button class="filter__btn btn-reset" aria-label="Фильтр по рейтенгу" data-filters-btn="sort">
+          <svg class="filter__btn-icon" width="24" height="24" viewBox="0 0 24 24">
+            <line x1="3" y1="7" x2="21" y2="7" stroke="white" stroke-width="2" />
+            <line x1="3" y1="12" x2="15" y2="12" stroke="white" stroke-width="2" />
+            <line x1="3" y1="17" x2="9" y2="17" stroke="white" stroke-width="2" />
+          </svg>
+          <span class="filter__btn-text">По рейгингу</span>
+        </button>
+
+        <ul class="filter-list" data-filters="sort">
+          <li class="filter-list__item">
+            <button class="filter-list__btn btn-reset">
+              от большего
+            </button>
+          </li>
+          <li class="filter-list__item">
+            <button class="filter-list__btn btn-reset">
+              от меньшего
+            </button>
+          </li>
+        </ul>
+      </div>
+      <div class="filters__item filter--actions filter">
+        <button class="filter__btn btn-reset" aria-label="Фильтр по статусу" data-filters-btn="actions">
+          <svg class="filter__btn-icon" width="24" height="24" viewBox="0 0 24 24">
+            <path
+              d="M4.25006 5.61C6.27006 8.2 10.0001 13 10.0001 13V19C10.0001 19.55 10.4501 20 11.0001 20H13.0001C13.5501 20 14.0001 19.55 14.0001 19V13C14.0001 13 17.7201 8.2 19.7401 5.61C20.2501 4.95 19.7801 4 18.9501 4H5.04006C4.21006 4 3.74006 4.95 4.25006 5.61Z"
+              fill="white" />
+          </svg>
+          <span class="filter__btn-text">Фильтр по статусу</span>
+        </button>
+        <ul class="filter-list" data-filters="actions">
+          <li class="filter-list__item">
+            <button class="filter-list__btn btn-reset">
+              хочу прочитать
+            </button>
+          </li>
+          <li class="filter-list__item">
+            <button class="filter-list__btn btn-reset">
+              прочитал
+            </button>
+          </li>
+          <li class="filter-list__item">
+            <button class="filter-list__btn btn-reset">
+              читаю
+            </button>
+          </li>
+          <li class="filter-list__item">
+            <button class="filter-list__btn btn-reset">
+              не дочитал
+            </button>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+  <div class="library-book">
+    <h2 class="library-book__title visually-hidden">Список книг библиотеке для чтения</h2>
+    <ul class="list-reset library-book__list book-list">
+      <li class="book-list__item">
+        <a href="/book" class="book-list__link">
+          <article class="cart">
+            <div class="cart__preview">
+              <img src="./images/1984.jpg" alt="" width="100" height="148" class="cart__preview-img">
+              <span class="cart__status">
+                хочу прочитать
+              </span>
+            </div>
+            <div class="cart__content">
+              <h3 class="cart__title">1984</h3>
+              <p class="cart__author">Джордж Оруэлл</p>
+              <p class="cart__descr">
+                Главный герой — Уинстон Смит — живёт в Лондоне, работает в Министерстве правды и является...
+              </p>
+              <div class="cart__rating">
+                <img src="./images/icons/star-fill.svg" alt="Рейтинг 5 из 5" class="cart__rating-start" width="18"
+                  height="18">
+                <img src="./images/icons/star-fill.svg" alt="" class="cart__rating-start" width="18" height="18">
+                <img src="./images/icons/star-fill.svg" alt="" class="cart__rating-start" width="18" height="18">
+                <img src="./images/icons/star-fill.svg" alt="" class="cart__rating-start" width="18" height="18">
+                <img src="./images/icons/star-stroke.svg" alt="" class="cart__rating-start" width="18" height="18">
+              </div>
+            </div>
+          </article>
+        </a>
+      </li>
+      <li class="book-list__item">
+        <a href="/book" class="book-list__link">
+          <article class="cart">
+            <div class="cart__preview">
+              <img src="./images/stub.jpg" alt="" width="100" height="148" class="cart__preview-img">
+              <span class="cart__status">
+                прочитал
+              </span>
+            </div>
+            <div class="cart__content">
+              <h3 class="cart__title">Гарри Поттер и Философский камень</h3>
+              <p class="cart__author">Джоан Роулинг</p>
+              <p class="cart__descr">
+                Первый роман в серии книг про юного волшебника Гарри Поттера, написанный Дж. К. Роулинг. В нём...
+              </p>
+              <div class="cart__rating">
+                <img src="./images/icons/star-fill.svg" alt="Рейтинг 5 из 5" class="cart__rating-start" width="18"
+                  height="18">
+                <img src="./images/icons/star-fill.svg" alt="" class="cart__rating-start" width="18" height="18">
+                <img src="./images/icons/star-fill.svg" alt="" class="cart__rating-start" width="18" height="18">
+                <img src="./images/icons/star-fill.svg" alt="" class="cart__rating-start" width="18" height="18">
+                <img src="./images/icons/star-stroke.svg" alt="" class="cart__rating-start" width="18" height="18">
+              </div>
+            </div>
+          </article>
+        </a>
+      </li>
+    </ul>
+  </div>
+</section>
+  <section class="section book">
+  <header class="header book__header">
+    <div class="continaer book__container">
+      <button class="header-btn header-btn--back btn-reset" aria-label="Удалить книгу">
+        <svg class="header-btn__icon header-btn__icon--back" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="white" />
+        </svg>
+      </button>
+
+      <button class="header-btn header-btn--remove btn-reset" aria-label="Удалить книгу">
+        <svg class="header-btn__icon header-btn__icon--remove" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M6 19C6 20.1 6.9 21 8 21H16C17.1 21 18 20.1 18 19V7H6V19ZM19 4H15.5L14.5 3H9.5L8.5 4H5V6H19V4Z"
+            fill="#ffffff" />
+        </svg>
+      </button>
+    </div>
+  </header>
+  <div class="book-content">
+    <div class="book-content__shell">
+      <img src="./images/1984.jpg" alt="" class="book-content__image">
+    </div>
+    <div class="book-content__descr">
+      <h3 class="book-content__title">
+        1984
+      </h3>
+      <p class="book-content__athor">
+        Джордж Оруэлл
+      </p>
+      <div class="book-content__rating">
+        <img src="./images/icons/star-fill.svg" alt="Рейтинг 5 из 5" class="book-content__rating-start" width="18"
+          height="18">
+        <img src="./images/icons/star-fill.svg" alt="" class="book-content__rating-start" width="18" height="18">
+        <img src="./images/icons/star-fill.svg" alt="" class="book-content__rating-start" width="18" height="18">
+        <img src="./images/icons/star-fill.svg" alt="" class="book-content__rating-start" width="18" height="18">
+        <img src="./images/icons/star-stroke.svg" alt="" class="book-content__rating-start" width="18" height="18">
+      </div>
+      <p class="book-content__more">
+        Описание
+      </p>
+      <p class="book-content__text">
+        Главный герой — Уинстон Смит — живёт в Лондоне, работает в Министерстве правды и является членом внешней партии. Он не разделяет партийные лозунги и идеологию и в глубине души сильно сомневается в партии, окружающей действительности и вообще во всём том, в чём только можно сомневаться. Чтобы «выпустить пар» и не совершить какой-нибудь безрассудный поступок, ведёт дневник, в котором старается излагать все свои сомнения. На людях же притворяется приверженцем партийных идей. Однако опасается, что девушка Джулия, работающая в том же министерстве, шпионит за ним и хочет разоблачить его. В то же время полагает, что высокопоставленный сотрудник их министерства, член внутренней партии некий О’Брайен также не разделяет мнения партии и является подпольным революционером.
+      </p>
+    </div>
+  </div>
+  <button class="book__btn btn-reset">
+    хочу прочитать
+  </button>
+</section>
+  <section class="section book-added">
+  <header class="header book-added__header">
+    <div class="container book-added__container">
+      <button class="header-btn header-btn--back btn-reset" aria-label="Удалить книгу">
+        <svg class="header-btn__icon header-btn__icon--back" width="24" height="24" viewBox="0 0 24 24">
+          <path d="M20 11H7.83L13.42 5.41L12 4L4 12L12 20L13.41 18.59L7.83 13H20V11Z" fill="white" />
+        </svg>
+      </button>
+
+      <div class="header__search">
+  <button class="header-btn header-btn--saerch search-btn" aria-label="Поиск книги">
+    <svg class="header-btn__icon header-btn__icon--search" width="24" height="24" viewBox="0 0 24 24">
+      <path
+        d="M15.5 14H14.71L14.43 13.73C15.41 12.59 16 11.11 16 9.5C16 5.91 13.09 3 9.5 3C5.91 3 3 5.91 3 9.5C3 13.09 5.91 16 9.5 16C11.11 16 12.59 15.41 13.73 14.43L14 14.71V15.5L19 20.49L20.49 19L15.5 14ZM9.5 14C7.01 14 5 11.99 5 9.5C5 7.01 7.01 5 9.5 5C11.99 5 14 7.01 14 9.5C14 11.99 11.99 14 9.5 14Z"
+        fill="white" />
+    </svg>
+  </button>
+</div>
+    </div>
+  </header>
+  <form class="form">
+    <h3 class="form__title visually-hidden">Добавте книгу за 3 простых шага</h3>
+    <div class="continaer form__container">
+      <fieldset class="form__field">
+        <legend class="form__title-step">Название и описание</legend>
+        <span class="form__step">шаг 1/3</span>
+        <div class="form__action" data-form-step="information">
+          <label class="form__action-label">
+            <span class="form__action-title">Название</span>
+            <input type="text" name="title">
+          </label>
+          <label class="form__action-label">
+            <span class="form__action-title">Автор</span>
+            <input type="text" name="author">
+          </label>
+          <label class="form__action-label">
+            <span class="form__action-title">Описание</span>
+            <textarea name="description"></textarea>
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="form__field">
+        <legend class="form__title-step">Обложка</legend>
+        <span class="form__step">шаг 2/3</span>
+        <div class="form__action" data-form-step="upload">
+          <span class="form__action-title">Загрузите обложку</span>
+          <label class="form__action-label">
+            <img src="./images/stub.jpg" alt="Обложка книги" width="300" height="450" class="form__preview">
+            <input type="file" name="cover" class="form__input form__input--upload" accept="image/png, image/jpeg">
+          </label>
+        </div>
+      </fieldset>
+      <fieldset class="form__field">
+        <legend class="form__title-step">Статус и оценка</legend>
+        <span class="form__step">шаг 3/3</span>
+        <div class="form__action" data-form-step="information">
+          <div class="form__action-label">
+            <span class="form__action-title">Выберите статус книги</span>
+            <div class="form__action-btns btn-status">
+              <label class="btn-status__label">
+                <span class="btn-status__text">хочу прочитать</span>
+                <input class="btn-status__radio" type="radio" name="status" value="wantRead">
+              </label>
+              <label class="btn-status__label">
+                <span class="btn-status__text">прочитал</span>
+                <input class="btn-status__radio" type="radio" name="status" value="readed">
+              </label>
+              <label class="btn-status__label">
+                <span class="btn-status__text">читаю</span>
+                <input class="btn-status__radio" type="radio" name="status" value="read">
+              </label>
+              <label class="btn-status__label">
+                <span class="btn-status__text">не дочитал</span>
+                <input class="btn-status__radio" type="radio" name="status" value="notFinish">
+              </label>
+            </div>
+          </div>
+          <div class="form__action-label">
+            <span class="form__action-title">Поставьте оценку</span>
+            <div class="form__action-rating">
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.2148 7.2197C10.3556 7.68316 10.7829 8 11.2673 8H14.6287C14.6629 8 14.6795 8.00945 14.6894 8.01711C14.7024 8.02717 14.716 8.04481 14.7239 8.06947C14.7318 8.09412 14.731 8.11643 14.7263 8.13214C14.7227 8.14411 14.7147 8.16145 14.6869 8.18135L11.9341 10.1489C11.5484 10.4245 11.3828 10.9163 11.523 11.3691L12.6047 14.8628C12.6148 14.8955 12.6107 14.9141 12.6063 14.9258C12.6005 14.9412 12.5877 14.9594 12.5665 14.9743C12.5453 14.9891 12.5238 14.9949 12.5074 14.9951C12.4949 14.9952 12.4759 14.9927 12.4487 14.972L9.66527 12.8597C9.27189 12.5612 8.72778 12.5614 8.33463 12.8602L5.55961 14.9696C5.53235 14.9903 5.51342 14.9928 5.50093 14.9927C5.48453 14.9925 5.46297 14.9868 5.44176 14.9719C5.42055 14.9571 5.40774 14.9388 5.40196 14.9234C5.39755 14.9118 5.39344 14.8931 5.40357 14.8604L6.48443 11.3695C6.62473 10.9163 6.45873 10.4243 6.07259 10.1487L3.31567 8.1814C3.28779 8.1615 3.27977 8.14416 3.27619 8.1322C3.2715 8.11649 3.27062 8.09418 3.27852 8.0695C3.28642 8.04483 3.3001 8.02718 3.31305 8.01711C3.3229 8.00945 3.3395 8 3.37376 8H6.73268C7.21705 8 7.64442 7.68317 7.7852 7.2197L8.90432 3.53536C8.91457 3.50162 8.92874 3.48862 8.93878 3.48165C8.95224 3.47232 8.9735 3.46442 9 3.46442C9.0265 3.46442 9.04776 3.47232 9.06122 3.48165C9.07126 3.48862 9.08543 3.50162 9.09568 3.53536L10.2148 7.2197Z"
+                  stroke="#F87C09" />
+              </svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.2148 7.2197C10.3556 7.68316 10.7829 8 11.2673 8H14.6287C14.6629 8 14.6795 8.00945 14.6894 8.01711C14.7024 8.02717 14.716 8.04481 14.7239 8.06947C14.7318 8.09412 14.731 8.11643 14.7263 8.13214C14.7227 8.14411 14.7147 8.16145 14.6869 8.18135L11.9341 10.1489C11.5484 10.4245 11.3828 10.9163 11.523 11.3691L12.6047 14.8628C12.6148 14.8955 12.6107 14.9141 12.6063 14.9258C12.6005 14.9412 12.5877 14.9594 12.5665 14.9743C12.5453 14.9891 12.5238 14.9949 12.5074 14.9951C12.4949 14.9952 12.4759 14.9927 12.4487 14.972L9.66527 12.8597C9.27189 12.5612 8.72778 12.5614 8.33463 12.8602L5.55961 14.9696C5.53235 14.9903 5.51342 14.9928 5.50093 14.9927C5.48453 14.9925 5.46297 14.9868 5.44176 14.9719C5.42055 14.9571 5.40774 14.9388 5.40196 14.9234C5.39755 14.9118 5.39344 14.8931 5.40357 14.8604L6.48443 11.3695C6.62473 10.9163 6.45873 10.4243 6.07259 10.1487L3.31567 8.1814C3.28779 8.1615 3.27977 8.14416 3.27619 8.1322C3.2715 8.11649 3.27062 8.09418 3.27852 8.0695C3.28642 8.04483 3.3001 8.02718 3.31305 8.01711C3.3229 8.00945 3.3395 8 3.37376 8H6.73268C7.21705 8 7.64442 7.68317 7.7852 7.2197L8.90432 3.53536C8.91457 3.50162 8.92874 3.48862 8.93878 3.48165C8.95224 3.47232 8.9735 3.46442 9 3.46442C9.0265 3.46442 9.04776 3.47232 9.06122 3.48165C9.07126 3.48862 9.08543 3.50162 9.09568 3.53536L10.2148 7.2197Z"
+                  stroke="#F87C09" />
+              </svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.2148 7.2197C10.3556 7.68316 10.7829 8 11.2673 8H14.6287C14.6629 8 14.6795 8.00945 14.6894 8.01711C14.7024 8.02717 14.716 8.04481 14.7239 8.06947C14.7318 8.09412 14.731 8.11643 14.7263 8.13214C14.7227 8.14411 14.7147 8.16145 14.6869 8.18135L11.9341 10.1489C11.5484 10.4245 11.3828 10.9163 11.523 11.3691L12.6047 14.8628C12.6148 14.8955 12.6107 14.9141 12.6063 14.9258C12.6005 14.9412 12.5877 14.9594 12.5665 14.9743C12.5453 14.9891 12.5238 14.9949 12.5074 14.9951C12.4949 14.9952 12.4759 14.9927 12.4487 14.972L9.66527 12.8597C9.27189 12.5612 8.72778 12.5614 8.33463 12.8602L5.55961 14.9696C5.53235 14.9903 5.51342 14.9928 5.50093 14.9927C5.48453 14.9925 5.46297 14.9868 5.44176 14.9719C5.42055 14.9571 5.40774 14.9388 5.40196 14.9234C5.39755 14.9118 5.39344 14.8931 5.40357 14.8604L6.48443 11.3695C6.62473 10.9163 6.45873 10.4243 6.07259 10.1487L3.31567 8.1814C3.28779 8.1615 3.27977 8.14416 3.27619 8.1322C3.2715 8.11649 3.27062 8.09418 3.27852 8.0695C3.28642 8.04483 3.3001 8.02718 3.31305 8.01711C3.3229 8.00945 3.3395 8 3.37376 8H6.73268C7.21705 8 7.64442 7.68317 7.7852 7.2197L8.90432 3.53536C8.91457 3.50162 8.92874 3.48862 8.93878 3.48165C8.95224 3.47232 8.9735 3.46442 9 3.46442C9.0265 3.46442 9.04776 3.47232 9.06122 3.48165C9.07126 3.48862 9.08543 3.50162 9.09568 3.53536L10.2148 7.2197Z"
+                  stroke="#F87C09" />
+              </svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.2148 7.2197C10.3556 7.68316 10.7829 8 11.2673 8H14.6287C14.6629 8 14.6795 8.00945 14.6894 8.01711C14.7024 8.02717 14.716 8.04481 14.7239 8.06947C14.7318 8.09412 14.731 8.11643 14.7263 8.13214C14.7227 8.14411 14.7147 8.16145 14.6869 8.18135L11.9341 10.1489C11.5484 10.4245 11.3828 10.9163 11.523 11.3691L12.6047 14.8628C12.6148 14.8955 12.6107 14.9141 12.6063 14.9258C12.6005 14.9412 12.5877 14.9594 12.5665 14.9743C12.5453 14.9891 12.5238 14.9949 12.5074 14.9951C12.4949 14.9952 12.4759 14.9927 12.4487 14.972L9.66527 12.8597C9.27189 12.5612 8.72778 12.5614 8.33463 12.8602L5.55961 14.9696C5.53235 14.9903 5.51342 14.9928 5.50093 14.9927C5.48453 14.9925 5.46297 14.9868 5.44176 14.9719C5.42055 14.9571 5.40774 14.9388 5.40196 14.9234C5.39755 14.9118 5.39344 14.8931 5.40357 14.8604L6.48443 11.3695C6.62473 10.9163 6.45873 10.4243 6.07259 10.1487L3.31567 8.1814C3.28779 8.1615 3.27977 8.14416 3.27619 8.1322C3.2715 8.11649 3.27062 8.09418 3.27852 8.0695C3.28642 8.04483 3.3001 8.02718 3.31305 8.01711C3.3229 8.00945 3.3395 8 3.37376 8H6.73268C7.21705 8 7.64442 7.68317 7.7852 7.2197L8.90432 3.53536C8.91457 3.50162 8.92874 3.48862 8.93878 3.48165C8.95224 3.47232 8.9735 3.46442 9 3.46442C9.0265 3.46442 9.04776 3.47232 9.06122 3.48165C9.07126 3.48862 9.08543 3.50162 9.09568 3.53536L10.2148 7.2197Z"
+                  stroke="#F87C09" />
+              </svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.2148 7.2197C10.3556 7.68316 10.7829 8 11.2673 8H14.6287C14.6629 8 14.6795 8.00945 14.6894 8.01711C14.7024 8.02717 14.716 8.04481 14.7239 8.06947C14.7318 8.09412 14.731 8.11643 14.7263 8.13214C14.7227 8.14411 14.7147 8.16145 14.6869 8.18135L11.9341 10.1489C11.5484 10.4245 11.3828 10.9163 11.523 11.3691L12.6047 14.8628C12.6148 14.8955 12.6107 14.9141 12.6063 14.9258C12.6005 14.9412 12.5877 14.9594 12.5665 14.9743C12.5453 14.9891 12.5238 14.9949 12.5074 14.9951C12.4949 14.9952 12.4759 14.9927 12.4487 14.972L9.66527 12.8597C9.27189 12.5612 8.72778 12.5614 8.33463 12.8602L5.55961 14.9696C5.53235 14.9903 5.51342 14.9928 5.50093 14.9927C5.48453 14.9925 5.46297 14.9868 5.44176 14.9719C5.42055 14.9571 5.40774 14.9388 5.40196 14.9234C5.39755 14.9118 5.39344 14.8931 5.40357 14.8604L6.48443 11.3695C6.62473 10.9163 6.45873 10.4243 6.07259 10.1487L3.31567 8.1814C3.28779 8.1615 3.27977 8.14416 3.27619 8.1322C3.2715 8.11649 3.27062 8.09418 3.27852 8.0695C3.28642 8.04483 3.3001 8.02718 3.31305 8.01711C3.3229 8.00945 3.3395 8 3.37376 8H6.73268C7.21705 8 7.64442 7.68317 7.7852 7.2197L8.90432 3.53536C8.91457 3.50162 8.92874 3.48862 8.93878 3.48165C8.95224 3.47232 8.9735 3.46442 9 3.46442C9.0265 3.46442 9.04776 3.47232 9.06122 3.48165C9.07126 3.48862 9.08543 3.50162 9.09568 3.53536L10.2148 7.2197Z"
+                  stroke="#F87C09" />
+              </svg>
+              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M10.2148 7.2197C10.3556 7.68316 10.7829 8 11.2673 8H14.6287C14.6629 8 14.6795 8.00945 14.6894 8.01711C14.7024 8.02717 14.716 8.04481 14.7239 8.06947C14.7318 8.09412 14.731 8.11643 14.7263 8.13214C14.7227 8.14411 14.7147 8.16145 14.6869 8.18135L11.9341 10.1489C11.5484 10.4245 11.3828 10.9163 11.523 11.3691L12.6047 14.8628C12.6148 14.8955 12.6107 14.9141 12.6063 14.9258C12.6005 14.9412 12.5877 14.9594 12.5665 14.9743C12.5453 14.9891 12.5238 14.9949 12.5074 14.9951C12.4949 14.9952 12.4759 14.9927 12.4487 14.972L9.66527 12.8597C9.27189 12.5612 8.72778 12.5614 8.33463 12.8602L5.55961 14.9696C5.53235 14.9903 5.51342 14.9928 5.50093 14.9927C5.48453 14.9925 5.46297 14.9868 5.44176 14.9719C5.42055 14.9571 5.40774 14.9388 5.40196 14.9234C5.39755 14.9118 5.39344 14.8931 5.40357 14.8604L6.48443 11.3695C6.62473 10.9163 6.45873 10.4243 6.07259 10.1487L3.31567 8.1814C3.28779 8.1615 3.27977 8.14416 3.27619 8.1322C3.2715 8.11649 3.27062 8.09418 3.27852 8.0695C3.28642 8.04483 3.3001 8.02718 3.31305 8.01711C3.3229 8.00945 3.3395 8 3.37376 8H6.73268C7.21705 8 7.64442 7.68317 7.7852 7.2197L8.90432 3.53536C8.91457 3.50162 8.92874 3.48862 8.93878 3.48165C8.95224 3.47232 8.9735 3.46442 9 3.46442C9.0265 3.46442 9.04776 3.47232 9.06122 3.48165C9.07126 3.48862 9.08543 3.50162 9.09568 3.53536L10.2148 7.2197Z"
+                  stroke="#F87C09" />
+              </svg>
+            </div>
+          </div>
+        </div>
+      </fieldset>
+      <button type="button" class="form__btn form__btn--next">Далее</button>
+      <button type="button" class="form__btn form__btn--add">Добавить книгу</button>
+    </div>
+  </form>
+</section>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.9.1/gsap.min.js"></script>
+  <script src="./js/main.min.js"></script>
+
+</body>
+
+</html>
