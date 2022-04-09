@@ -15,12 +15,28 @@
 
   &__shell {
     max-width: 168px;
-    border-radius: 10px;
-    overflow: hidden;
     margin: 0 auto 20px;
     grid-area: preview;
+    position: relative;
+    z-index: 1;
+    
+    &::after{
+      content: '';
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 233px;
+      height: 233px;
+      background-color: #ff0000;
+      border-radius: 50%;
+      filter: blur(150px);
+      z-index: -1;
+    }
   }
-
+  &__image{
+    border-radius: 10px;
+  }
   &__title {
     grid-area: titleBook;
     font: 700 26px/32px var(--font);
