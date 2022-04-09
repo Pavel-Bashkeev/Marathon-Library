@@ -1,5 +1,10 @@
-*,*::after,*::before{
-  box-sizing: border-box;
-}
+@import './settings/classFrame';
+@import './settings/fonts';
+@import './settings/vars';
+@import './settings/global';
 
-@import './components/logo';
+// components
+@import './components/header';
+@import './components/library';
+// particles
+@import './components/particles/logo';

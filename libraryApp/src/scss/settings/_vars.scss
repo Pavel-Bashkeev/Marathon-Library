@@ -1,0 +1,28 @@
+
+
+%bg-cover{
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+%bg-contain{
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: center;
+}
+%bg-100{
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-position: center;
+}
+:root{
+	--font: 'Montserrat';
+
+  // color
+  --light: #ffffff;
+  --accent: #F87C09;
+  --black: #000000;
+  --disable: #AEAAAA;
+  --default: #181818;
+  --gray:#6b6b6b;
+}

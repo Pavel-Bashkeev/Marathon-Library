@@ -1,32 +1,66 @@
+import Navigo from 'navigo';
+import { animLogo } from './components/animLogo.js';
+
+if(document.readyState === 'loading'){
+  console.log('loading');
+}
+if(document.readyState === 'complete'){
+  console.log('complete');
+}
+if(document.readyState === 'interactive'){
+  console.log('interactive');
+}
+console.log(document.readyState)
 document.addEventListener('DOMContentLoaded', () => {
-  if (document.querySelector('#eye')) {
-    // anim Eyelid
-    CSSPlugin.defaultTransformPerspective = 1000;
-    const topEyelid = document.querySelector('#top-eyelid')
-    const bottomEyelid = document.querySelector('#bottom-eyelid')
-    const pupil = document.querySelector('#pupil')
-    const eyelashes = document.querySelector('#eyelashes');
-    const tlEyelashes = gsap.timeline({ defaults: { repeat: -1, repeatDelay: 6, } })
+  const library = document.querySelector('.library');
+  const book = document.querySelector('.book');
+  const addBook = document.querySelector('.book-added');
+  const btnsBack = document.querySelectorAll('.header-btn--back');
+  const btnsAddBook = document.querySelectorAll('.btn-add');
 
-    const topEndEyelid = "M1.75848 18.8602C12.5 18.9716 15.5 18.8602 35.6835 18.9716"
-    const topStartEyelid = "M1.75848 18.8602C7.53334 12.3797 22.4031 3.32933 35.6835 18.9716"
-
-    const bottomEndEyelid = "M1.75848 18.4145C11.5 18.3031 20.5 18.4145 35.6835 18.3031"
-    const bottomStartEyelid = "M1.75848 18.4145C7.53334 24.895 22.4031 33.9453 35.6835 18.3031"
+  // Anim logo
+  animLogo()
+  // Anim logo
+  
+  
 
 
+  const router = new Navigo('/', {
+    hash: false
+  })
+  
+  router.on({
+    '/': () => {
+      closeSection(library, book, addBook);
+      library.classList.remove('hidden');
 
-    gsap.set(eyelashes, { transformOrigin: 'bottom', y: 8, scaleY: -1 })
-    gsap.set(pupil, { transformOrigin: 'center', scale: 0, opacity: 0 })
-    gsap.set(topEyelid, { attr: { d: topEndEyelid }, opacity: 0, })
-    gsap.set(bottomEyelid, { attr: { d: bottomEndEyelid }, opacity: 0, })
+    },
+    'book': () => {
 
-
-    tlEyelashes.to(eyelashes, { y: 0, scaleY: 1.2, })
-    tlEyelashes.fromTo(pupil, { scale: 0, opacity: 0 }, { scale: 1, opacity: 1 }, '<');
-    tlEyelashes.to(topEyelid, { attr: { d: topStartEyelid }, opacity: 1 }, '<');
-    tlEyelashes.to(bottomEyelid, { attr: { d: bottomStartEyelid }, opacity: 1, }, '<');
-  }
-
-
+      closeSection(library, book, addBook);
+      book.classList.remove('hidden');
+    },
+    'add-book': () => {
+      closeSection(library, book, addBook);
+      addBook.classList.remove('hidden');
+    }
+  }).resolve()
+  
+  btnsBack.forEach(btn => {
+    btn.addEventListener('click', () => {
+      router.navigate('/')
+    })
+  })
+  btnsAddBook.forEach(btn => {
+    btn.addEventListener('click', () => {
+      router.navigate('add-book')
+    })
+  })
+  
 })
+
+function closeSection(...sections) {
+  sections.forEach(section => {
+    section.classList.add('hidden');
+  })
+}

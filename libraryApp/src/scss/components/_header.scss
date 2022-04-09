@@ -1,0 +1,32 @@
+.header{
+  padding-top: 8px;
+  
+  &__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  &__btn-wrapper{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    left: 0;
+    padding: 15px 0;
+    background-color: var(--black);
+  }
+}
+.btn-add{
+  &--mobil{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background-color: var(--accent);
+    margin:0 auto;
+    border-radius: 50%;
+  }
+  &--desctop{
+    display: none;
+  }
+}

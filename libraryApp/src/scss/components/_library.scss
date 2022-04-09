@@ -1,0 +1,149 @@
+
+.library {
+  &__header {
+    margin-bottom: 25px;
+  }
+
+  &__actions {
+    margin-bottom: 20px;
+  }
+
+  &__title {
+    font: 700 26px/32px var(--font);
+    color: var(--light);
+    margin: 0 0 8px;
+  }
+
+  &__counts {
+    font: 400 14px/16px var(--font);
+    color: var(--light);
+    margin: 0 0 25px;
+  }
+
+  &__filters {
+    margin-bottom: 20px;
+  }
+}
+
+.filters {
+
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+
+.filter {
+  position: relative;
+
+  &__btn {
+    display: flex;
+    align-items: center;
+    gap: 4px;
+  }
+
+  &__btn-text {
+    font: 500 10px/13px var(--font);
+    color: var(--light);
+    display: block;
+  }
+}
+
+.filter-list {
+  background-color: var(--light);
+  padding: 15px;
+  border-radius: 10px;
+  position: absolute;
+  top: 30px;
+
+  &--sort {
+    left: -10px;
+    width: 126px;
+    @extend .hidden;
+  }
+
+  &--actions {
+    right: -10px;
+    width: 142px;
+    @extend .hidden;
+  }
+
+  &__item {
+    &:not(:last-child) {
+      margin-bottom: 15px;
+    }
+  }
+
+  &__btn {
+    background-color: #EAEAEA;
+    border-radius: 16px;
+    text-align: center;
+    font: 400 12px/12px var(--font);
+    color: var(--black);
+    text-align: center;
+    padding: 8px;
+  }
+}
+
+.library-book {
+  padding: 0 12px;
+}
+
+.book-list {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+  gap: 15px 26px;
+  flex-wrap: wrap;
+}
+
+.cart{
+  background-color: var(--light);
+  border-radius: 10px;
+  padding: 8px;
+  display: flex;
+  align-items: flex-start;
+  gap:10px;
+  &__preview{
+    display: grid;
+    border-radius: 4px;
+    overflow: hidden;
+    width: 100px;
+    flex-shrink: 0;
+  }
+  &__preview-img{
+    grid-area: 1/1;
+  }
+  &__status{
+    grid-area: 1/1;
+    padding: 5px 2px;
+    border-radius: 15px;
+    background-color: var(--light);
+    font:400 10px/12px var(--font);
+    color: var(--default);
+    margin: auto auto 8px;
+    width: 90%;
+    text-align: center;
+  }
+  &__title{
+    margin:0 0 2px;
+    color: var(--black);
+    font:500 16px/19px var(--font);
+  }
+  &__author{
+    font:500 12px/14px var(--font);
+    color: var(--gray);
+    margin: 0 0 10px;
+  }
+  &__descr{
+    font:400 12px/14px var(--font);
+    color: var(--black);
+    margin-bottom: 6px;
+  }
+  &__rating{
+    display: flex;
+    align-items: center;
+  }
+  &__rating-star{
+    width: 18px;
+    height: 18px;
+  }
+}
