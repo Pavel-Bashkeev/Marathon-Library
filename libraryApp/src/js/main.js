@@ -1,16 +1,6 @@
 import Navigo from 'navigo';
 import { animLogo } from './components/animLogo.js';
 
-if(document.readyState === 'loading'){
-  console.log('loading');
-}
-if(document.readyState === 'complete'){
-  console.log('complete');
-}
-if(document.readyState === 'interactive'){
-  console.log('interactive');
-}
-console.log(document.readyState)
 document.addEventListener('DOMContentLoaded', () => {
   const library = document.querySelector('.library');
   const book = document.querySelector('.book');
@@ -23,10 +13,8 @@ document.addEventListener('DOMContentLoaded', () => {
   // Anim logo
   
   
-
-
   const router = new Navigo('/', {
-    hash: false
+    hash: true
   })
   
   router.on({
@@ -64,3 +52,4 @@ function closeSection(...sections) {
     section.classList.add('hidden');
   })
 }
+

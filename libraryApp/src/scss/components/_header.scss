@@ -11,8 +11,11 @@
     bottom: 0;
     width: 100%;
     left: 0;
-    padding: 15px 0;
+    padding: 10px 0;
     background-color: var(--black);
+  }
+  &-btn__icon{
+    pointer-events: none;
   }
 }
 .btn-add{

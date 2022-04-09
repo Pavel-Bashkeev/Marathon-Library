@@ -1,0 +1,85 @@
+.book{
+  padding-bottom: 70px;
+}
+.book-content {
+  padding-top: 30px;
+  display: grid;
+  grid-template-areas:
+    'preview'
+    'titleBook'
+    'author'
+    'rating'
+    'more'
+    'text'
+  ;
+
+  &__shell {
+    max-width: 168px;
+    border-radius: 10px;
+    overflow: hidden;
+    margin: 0 auto 20px;
+    grid-area: preview;
+  }
+
+  &__title {
+    grid-area: titleBook;
+    font: 700 26px/32px var(--font);
+    color: var(--light);
+    margin: 0 0 4px;
+  }
+
+  &__author {
+    grid-area: author;
+    font: 400 14px/18px var(--font);
+    color: var(--light);
+    margin: 0 0 15px;
+  }
+
+  &__rating {
+    grid-area: rating;
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+
+    &-star {
+      width: 18px;
+      height: 18px;
+    }
+  }
+
+  &__more {
+    grid-area: more;
+    font: 400 12px/14px var(--font);
+    color: var(--light);
+    margin: 0 0 5px;
+  }
+
+  &__text {
+    grid-area: text;
+    font: 400 12px/14px var(--font);
+    color: var(--light);
+    margin: 0;
+  }
+
+  &__wrapper {
+    grid-area: btnAction;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    bottom: 0;
+    background-color: var(--black);
+    padding: 5px 5px;
+  }
+
+  &__btn {
+    background-color: var(--light);
+    border-radius: 15px;
+    text-align: center;
+    padding: 18px 0;
+    font: 500 14px/16px var(--font);
+    color: var(--black);
+    width: 320px;
+    margin: 0 auto;
+    display: block;
+  }
+}
