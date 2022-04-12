@@ -2,6 +2,9 @@
 .book{
   padding-bottom: 70px;
 }
+.book-list__link{
+  display: block;
+}
 .book-content {
   padding-top: 30px;
   display: grid;
@@ -80,6 +83,7 @@
     bottom: 0;
     background-color: var(--black);
     padding: 5px 5px;
+    z-index: 3;
   }
 
   &__btn {

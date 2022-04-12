@@ -64,6 +64,9 @@
       right: 10px;
     }
  }
+ &-icon{
+   pointer-events: none;
+ }
   @include laptop{
     width: 580px;
   }
