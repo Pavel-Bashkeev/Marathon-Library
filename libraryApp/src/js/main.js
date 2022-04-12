@@ -18,8 +18,7 @@ document.addEventListener('DOMContentLoaded', () => {
   
   
   const router = new Navigo('/', {
-    hash: true,
-    noMatchWarning: true
+    hash: true
   })
   
   router.on({
