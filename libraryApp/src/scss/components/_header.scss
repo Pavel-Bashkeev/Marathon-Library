@@ -1,6 +1,6 @@
 .header{
   padding-top: 8px;
-  
+  position: relative;
   &__container{
     display: flex;
     align-items: center;
@@ -29,7 +29,15 @@
     margin:0 auto;
     border-radius: 50%;
   }
-  &--desctop{
+  &--desktop{
     display: none;
+  }
+}
+@include laptop {
+  .header {
+    padding-top: 20px;
+  }
+  #eye{
+    transform: scale(1.5);
   }
 }

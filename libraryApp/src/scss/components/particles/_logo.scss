@@ -11,3 +11,8 @@
     text-align: center;
   }
 }
+@include laptop{
+  .logo__text {
+    font: 700 16px/19px var(--font);
+  }
+}

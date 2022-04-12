@@ -1,5 +1,6 @@
 import Navigo from 'navigo';
 import { animLogo } from './components/animLogo.js';
+import { search } from './components/search.js';
 
 document.addEventListener('DOMContentLoaded', () => {
   const library = document.querySelector('.library');
@@ -9,8 +10,11 @@ document.addEventListener('DOMContentLoaded', () => {
   const btnsAddBook = document.querySelectorAll('.btn-add');
 
   // Anim logo
-  animLogo()
+  animLogo();
   // Anim logo
+  // search
+  search();
+  // search
   
   
   const router = new Navigo('/', {

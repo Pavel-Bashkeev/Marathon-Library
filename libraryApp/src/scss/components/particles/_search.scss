@@ -1,0 +1,70 @@
+.search__form{
+  $height: 50px;
+  $offsetTop: 10px;
+  position: absolute;
+  right: 0;
+  top: 0px;
+  width: 100%;
+  transform: translateY(-$offsetTop - $height);
+  transition: all .5s ease-in-out;
+  &-container{
+    position: relative;
+    @include laptop{
+      padding: 0;
+      margin: 0 45px;
+    }
+    @include desktop{
+      margin: 0px 25px;
+    }
+  }
+  &--active{
+    transform: translateY($offsetTop);
+    @include laptop {
+        transform: translateY($offsetTop + 10);
+    }
+  }
+  &-input{
+    width: 100%;
+    height: 50px;
+    border: none;
+    border-radius: 20px;
+    padding: 0 70px 0 15px;
+    &:focus{
+      outline: 1px solid #6B6B6B;
+      outline-offset: -1px;
+    }
+    @include laptop {
+      height: 55px;
+    }
+  }
+  &-btn{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: var(--black);
+    width: 24px;
+    height: 24px;
+    display: block;
+  }
+  &-btn--search{
+    right: 45px;
+    @include tablet{
+      right: 64px;
+    }
+    @include laptop{
+      right: 45px;
+    }
+  }
+  &-btn--close{
+    right: 5px;
+    @include tablet{
+      right: 30px;
+    }
+    @include laptop{
+      right: 10px;
+    }
+ }
+  @include laptop{
+    width: 580px;
+  }
+}

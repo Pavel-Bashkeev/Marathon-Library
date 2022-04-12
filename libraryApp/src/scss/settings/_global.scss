@@ -1,7 +1,10 @@
+html{
+	box-sizing: border-box;
+}
 *,
 *::after,
 *::before {
-	box-sizing: border-box;
+	box-sizing: inherit;
 }
 
 a {
@@ -31,6 +34,7 @@ body {
 
 .container {
 	max-width: 1100px;
+	margin: 0 auto;
 	padding: 0 20px;
 }
 
@@ -61,4 +65,10 @@ body {
 	height: 1px !important;
 	width: 1px !important;
 	overflow: hidden;
+}
+
+@include laptop{
+	.container{
+		padding: 0 45px;
+	}
 }

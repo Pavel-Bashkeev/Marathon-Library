@@ -1,22 +1,23 @@
-
-
-%bg-cover{
+%bg-cover {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
 }
-%bg-contain{
+
+%bg-contain {
   background-repeat: no-repeat;
   background-size: contain;
   background-position: center;
 }
-%bg-100{
+
+%bg-100 {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-position: center;
 }
-:root{
-	--font: 'Montserrat';
+
+:root {
+  --font: 'Montserrat';
 
   // color
   --light: #ffffff;
@@ -24,5 +25,23 @@
   --black: #000000;
   --disable: #AEAAAA;
   --default: #181818;
-  --gray:#6b6b6b;
+  --gray: #6b6b6b;
+}
+
+@mixin tablet {
+  @media (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin laptop {
+  @media (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin desktop {
+  @media (min-width: 1280px) {
+    @content;
+  }
 }

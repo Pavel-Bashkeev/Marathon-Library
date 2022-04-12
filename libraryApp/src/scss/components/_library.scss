@@ -86,14 +86,14 @@
 }
 
 .library-book {
+  @extend .container;
   padding: 0 12px;
 }
 
 .book-list {
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+  grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
   gap: 15px 26px;
-  flex-wrap: wrap;
 }
 
 .cart{
@@ -146,5 +146,50 @@
   &__rating-star{
     width: 18px;
     height: 18px;
+  }
+}
+@media (max-width:360px) {
+  .book-list {
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  }
+}
+@include tablet{
+  .book-list {
+    grid-template-columns: repeat(auto-fill, minmax(336px, 1fr));
+  }
+}
+@include laptop{
+  .library-book {
+    padding: 0 45px;
+  }
+  .book-list {
+    max-width: 700px;
+  }
+  .header__btn-wrapper{
+    position: static;
+    width: fit-content;
+    margin:0 118px 0 auto;
+    padding: 0;
+  }
+  .btn-add--mobil{
+    display: none;
+  }
+  .btn-add--desktop{
+    display: block;
+    width: 320px;
+    text-align: center;
+    padding: 18px 0;
+    background-color: var(--accent);
+    border-radius: 8px;
+  }
+  .btn-add__text{
+    color: var(--light);
+    font:500 14px/16px var(--font);
+    margin: 0;
+  }
+}
+@include desktop {
+  .book-list {
+    max-width: 780px;
   }
 }
