@@ -12,17 +12,13 @@ document.addEventListener('DOMContentLoaded', () => {
   // Anim logo
   animLogo();
   // Anim logo
-  // search
-  search();
-  // search
-  
-  
+ 
+ 
   const router = new Navigo('/', {
     hash: true
   })
-  
   router.on({
-    '/': () => {
+    '': () => {
       closeSection(library, book, addBook);
       library.classList.remove('hidden');
 
@@ -48,7 +44,9 @@ document.addEventListener('DOMContentLoaded', () => {
       router.navigate('add-book')
     })
   })
-  
+   // search
+   search();
+  // search
 })
 
 function closeSection(...sections) {
