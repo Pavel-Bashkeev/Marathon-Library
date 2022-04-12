@@ -2,7 +2,6 @@ import Navigo from 'navigo';
 import { animLogo } from './components/animLogo.js';
 import { search } from './components/search.js';
 
-document.addEventListener('DOMContentLoaded', () => {
   const library = document.querySelector('.library');
   const book = document.querySelector('.book');
   const addBook = document.querySelector('.book-added');
@@ -47,7 +46,6 @@ document.addEventListener('DOMContentLoaded', () => {
    // search
    search();
   // search
-})
 
 function closeSection(...sections) {
   sections.forEach(section => {
