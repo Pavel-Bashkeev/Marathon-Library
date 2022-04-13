@@ -11,101 +11,88 @@
     </div>
   </header>
   <form class="form">
-    <h3 class="form__title visually-hidden">Добавте книгу за 3 простых шага</h3>
-    <div class="continaer form__container">
-      <fieldset class="form__field">
+    <h3 class="visually-hidden">Добавте книгу за 3 простых шага</h3>
+    <div class="container form__container">
+      <fieldset class="form__field fieldset-reset">
         <legend class="form__title-step">Название и описание</legend>
-        <span class="form__step">шаг 1/3</span>
-        <div class="form__action" data-form-step="information">
-          <label class="form__action-label">
-            <span class="form__action-title">Название</span>
-            <input type="text" name="title">
+        <p class="form__step">шаг 1/3</p>
+        <div class="form__action form-info">
+          <label class="form-info__label">
+            <span class="form-info__title">Название</span>
+            <input type="text" name="title" class="form-info__input" required>
           </label>
-          <label class="form__action-label">
-            <span class="form__action-title">Автор</span>
-            <input type="text" name="author">
+          <label class="form-info__label">
+            <span class="form-info__title">Автор</span>
+            <input type="text" name="author" class="form-info__input" required>
           </label>
-          <label class="form__action-label">
-            <span class="form__action-title">Описание</span>
-            <textarea name="description"></textarea>
+          <label class="form-info__label">
+            <span class="form-info__title">Описание</span>
+            <textarea name="description" class="form-info__textarea" required></textarea>
           </label>
         </div>
       </fieldset>
-      <fieldset class="form__field">
+      <fieldset class="form__field fieldset-reset hidden">
         <legend class="form__title-step">Обложка</legend>
-        <span class="form__step">шаг 2/3</span>
-        <div class="form__action" data-form-step="upload">
-          <span class="form__action-title">Загрузите обложку</span>
-          <label class="form__action-label">
-            <img src="./images/stub.jpg" alt="Обложка книги" width="300" height="450" class="form__preview">
-            <input type="file" name="cover" class="form__input form__input--upload" accept="image/png, image/jpeg">
+        <p class="form__step">шаг 2/3</p>
+        <button type="button" class="form__btn--back form__btn btn-reset">
+          вернуться на шаг назад
+        </button>
+        <div class="form__action form-upload">
+          <label class="form-upload__label">
+            <p class="form-upload__title">Загрузите обложку</p>
+            <img src="./images/upload.jpg" alt="Обложка книги" width="300" height="450" class="form__preview">
+            <input type="file" name="cover" class="form-upload__input visually-hidden" accept="image/png, image/jpeg">
           </label>
         </div>
       </fieldset>
-      <fieldset class="form__field">
+      <fieldset class="form__field fieldset-reset hidden">
         <legend class="form__title-step">Статус и оценка</legend>
-        <span class="form__step">шаг 3/3</span>
-        <div class="form__action" data-form-step="information">
-          <div class="form__action-label">
-            <span class="form__action-title">Выберите статус книги</span>
-            <div class="form__action-btns btn-status">
-              <label class="btn-status__label">
-                <span class="btn-status__text">хочу прочитать</span>
-                <input class="btn-status__radio" type="radio" name="status" value="wantRead">
+        <p class="form__step">шаг 3/3</p>
+        <button type="button" class="form__btn--back form__btn btn-reset">
+          вернуться на шаг назад
+        </button>
+        <div class="form__action form-btns">
+          <div class="form-btns__label">
+            <span class="form-btns__title">Выберите статус книги</span>
+            <div class="form-btns__items btns-status">
+              <label class="btns-status__label">
+                <input class="btns-status__radio" type="radio" name="status" value="wantRead" required>
+                <span class="btns-status__text">хочу прочитать</span>
               </label>
-              <label class="btn-status__label">
-                <span class="btn-status__text">прочитал</span>
-                <input class="btn-status__radio" type="radio" name="status" value="readed">
+              <label class="btns-status__label">
+                <input class="btns-status__radio" type="radio" name="status" value="readed">
+                <span class="btns-status__text">прочитал</span>
               </label>
-              <label class="btn-status__label">
-                <span class="btn-status__text">читаю</span>
-                <input class="btn-status__radio" type="radio" name="status" value="read">
+              <label class="btns-status__label">
+                <input class="btns-status__radio" type="radio" name="status" value="read">
+                <span class="btns-status__text">читаю</span>
               </label>
-              <label class="btn-status__label">
-                <span class="btn-status__text">не дочитал</span>
-                <input class="btn-status__radio" type="radio" name="status" value="notFinish">
+              <label class="btns-status__label">
+                <input class="btns-status__radio" type="radio" name="status" value="notFinish">
+                <span class="btns-status__text">не дочитал</span>
               </label>
             </div>
           </div>
-          <div class="form__action-label">
-            <span class="form__action-title">Поставьте оценку</span>
-            <div class="form__action-rating">
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.2148 7.2197C10.3556 7.68316 10.7829 8 11.2673 8H14.6287C14.6629 8 14.6795 8.00945 14.6894 8.01711C14.7024 8.02717 14.716 8.04481 14.7239 8.06947C14.7318 8.09412 14.731 8.11643 14.7263 8.13214C14.7227 8.14411 14.7147 8.16145 14.6869 8.18135L11.9341 10.1489C11.5484 10.4245 11.3828 10.9163 11.523 11.3691L12.6047 14.8628C12.6148 14.8955 12.6107 14.9141 12.6063 14.9258C12.6005 14.9412 12.5877 14.9594 12.5665 14.9743C12.5453 14.9891 12.5238 14.9949 12.5074 14.9951C12.4949 14.9952 12.4759 14.9927 12.4487 14.972L9.66527 12.8597C9.27189 12.5612 8.72778 12.5614 8.33463 12.8602L5.55961 14.9696C5.53235 14.9903 5.51342 14.9928 5.50093 14.9927C5.48453 14.9925 5.46297 14.9868 5.44176 14.9719C5.42055 14.9571 5.40774 14.9388 5.40196 14.9234C5.39755 14.9118 5.39344 14.8931 5.40357 14.8604L6.48443 11.3695C6.62473 10.9163 6.45873 10.4243 6.07259 10.1487L3.31567 8.1814C3.28779 8.1615 3.27977 8.14416 3.27619 8.1322C3.2715 8.11649 3.27062 8.09418 3.27852 8.0695C3.28642 8.04483 3.3001 8.02718 3.31305 8.01711C3.3229 8.00945 3.3395 8 3.37376 8H6.73268C7.21705 8 7.64442 7.68317 7.7852 7.2197L8.90432 3.53536C8.91457 3.50162 8.92874 3.48862 8.93878 3.48165C8.95224 3.47232 8.9735 3.46442 9 3.46442C9.0265 3.46442 9.04776 3.47232 9.06122 3.48165C9.07126 3.48862 9.08543 3.50162 9.09568 3.53536L10.2148 7.2197Z"
-                  stroke="#F87C09" />
-              </svg>
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.2148 7.2197C10.3556 7.68316 10.7829 8 11.2673 8H14.6287C14.6629 8 14.6795 8.00945 14.6894 8.01711C14.7024 8.02717 14.716 8.04481 14.7239 8.06947C14.7318 8.09412 14.731 8.11643 14.7263 8.13214C14.7227 8.14411 14.7147 8.16145 14.6869 8.18135L11.9341 10.1489C11.5484 10.4245 11.3828 10.9163 11.523 11.3691L12.6047 14.8628C12.6148 14.8955 12.6107 14.9141 12.6063 14.9258C12.6005 14.9412 12.5877 14.9594 12.5665 14.9743C12.5453 14.9891 12.5238 14.9949 12.5074 14.9951C12.4949 14.9952 12.4759 14.9927 12.4487 14.972L9.66527 12.8597C9.27189 12.5612 8.72778 12.5614 8.33463 12.8602L5.55961 14.9696C5.53235 14.9903 5.51342 14.9928 5.50093 14.9927C5.48453 14.9925 5.46297 14.9868 5.44176 14.9719C5.42055 14.9571 5.40774 14.9388 5.40196 14.9234C5.39755 14.9118 5.39344 14.8931 5.40357 14.8604L6.48443 11.3695C6.62473 10.9163 6.45873 10.4243 6.07259 10.1487L3.31567 8.1814C3.28779 8.1615 3.27977 8.14416 3.27619 8.1322C3.2715 8.11649 3.27062 8.09418 3.27852 8.0695C3.28642 8.04483 3.3001 8.02718 3.31305 8.01711C3.3229 8.00945 3.3395 8 3.37376 8H6.73268C7.21705 8 7.64442 7.68317 7.7852 7.2197L8.90432 3.53536C8.91457 3.50162 8.92874 3.48862 8.93878 3.48165C8.95224 3.47232 8.9735 3.46442 9 3.46442C9.0265 3.46442 9.04776 3.47232 9.06122 3.48165C9.07126 3.48862 9.08543 3.50162 9.09568 3.53536L10.2148 7.2197Z"
-                  stroke="#F87C09" />
-              </svg>
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.2148 7.2197C10.3556 7.68316 10.7829 8 11.2673 8H14.6287C14.6629 8 14.6795 8.00945 14.6894 8.01711C14.7024 8.02717 14.716 8.04481 14.7239 8.06947C14.7318 8.09412 14.731 8.11643 14.7263 8.13214C14.7227 8.14411 14.7147 8.16145 14.6869 8.18135L11.9341 10.1489C11.5484 10.4245 11.3828 10.9163 11.523 11.3691L12.6047 14.8628C12.6148 14.8955 12.6107 14.9141 12.6063 14.9258C12.6005 14.9412 12.5877 14.9594 12.5665 14.9743C12.5453 14.9891 12.5238 14.9949 12.5074 14.9951C12.4949 14.9952 12.4759 14.9927 12.4487 14.972L9.66527 12.8597C9.27189 12.5612 8.72778 12.5614 8.33463 12.8602L5.55961 14.9696C5.53235 14.9903 5.51342 14.9928 5.50093 14.9927C5.48453 14.9925 5.46297 14.9868 5.44176 14.9719C5.42055 14.9571 5.40774 14.9388 5.40196 14.9234C5.39755 14.9118 5.39344 14.8931 5.40357 14.8604L6.48443 11.3695C6.62473 10.9163 6.45873 10.4243 6.07259 10.1487L3.31567 8.1814C3.28779 8.1615 3.27977 8.14416 3.27619 8.1322C3.2715 8.11649 3.27062 8.09418 3.27852 8.0695C3.28642 8.04483 3.3001 8.02718 3.31305 8.01711C3.3229 8.00945 3.3395 8 3.37376 8H6.73268C7.21705 8 7.64442 7.68317 7.7852 7.2197L8.90432 3.53536C8.91457 3.50162 8.92874 3.48862 8.93878 3.48165C8.95224 3.47232 8.9735 3.46442 9 3.46442C9.0265 3.46442 9.04776 3.47232 9.06122 3.48165C9.07126 3.48862 9.08543 3.50162 9.09568 3.53536L10.2148 7.2197Z"
-                  stroke="#F87C09" />
-              </svg>
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.2148 7.2197C10.3556 7.68316 10.7829 8 11.2673 8H14.6287C14.6629 8 14.6795 8.00945 14.6894 8.01711C14.7024 8.02717 14.716 8.04481 14.7239 8.06947C14.7318 8.09412 14.731 8.11643 14.7263 8.13214C14.7227 8.14411 14.7147 8.16145 14.6869 8.18135L11.9341 10.1489C11.5484 10.4245 11.3828 10.9163 11.523 11.3691L12.6047 14.8628C12.6148 14.8955 12.6107 14.9141 12.6063 14.9258C12.6005 14.9412 12.5877 14.9594 12.5665 14.9743C12.5453 14.9891 12.5238 14.9949 12.5074 14.9951C12.4949 14.9952 12.4759 14.9927 12.4487 14.972L9.66527 12.8597C9.27189 12.5612 8.72778 12.5614 8.33463 12.8602L5.55961 14.9696C5.53235 14.9903 5.51342 14.9928 5.50093 14.9927C5.48453 14.9925 5.46297 14.9868 5.44176 14.9719C5.42055 14.9571 5.40774 14.9388 5.40196 14.9234C5.39755 14.9118 5.39344 14.8931 5.40357 14.8604L6.48443 11.3695C6.62473 10.9163 6.45873 10.4243 6.07259 10.1487L3.31567 8.1814C3.28779 8.1615 3.27977 8.14416 3.27619 8.1322C3.2715 8.11649 3.27062 8.09418 3.27852 8.0695C3.28642 8.04483 3.3001 8.02718 3.31305 8.01711C3.3229 8.00945 3.3395 8 3.37376 8H6.73268C7.21705 8 7.64442 7.68317 7.7852 7.2197L8.90432 3.53536C8.91457 3.50162 8.92874 3.48862 8.93878 3.48165C8.95224 3.47232 8.9735 3.46442 9 3.46442C9.0265 3.46442 9.04776 3.47232 9.06122 3.48165C9.07126 3.48862 9.08543 3.50162 9.09568 3.53536L10.2148 7.2197Z"
-                  stroke="#F87C09" />
-              </svg>
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.2148 7.2197C10.3556 7.68316 10.7829 8 11.2673 8H14.6287C14.6629 8 14.6795 8.00945 14.6894 8.01711C14.7024 8.02717 14.716 8.04481 14.7239 8.06947C14.7318 8.09412 14.731 8.11643 14.7263 8.13214C14.7227 8.14411 14.7147 8.16145 14.6869 8.18135L11.9341 10.1489C11.5484 10.4245 11.3828 10.9163 11.523 11.3691L12.6047 14.8628C12.6148 14.8955 12.6107 14.9141 12.6063 14.9258C12.6005 14.9412 12.5877 14.9594 12.5665 14.9743C12.5453 14.9891 12.5238 14.9949 12.5074 14.9951C12.4949 14.9952 12.4759 14.9927 12.4487 14.972L9.66527 12.8597C9.27189 12.5612 8.72778 12.5614 8.33463 12.8602L5.55961 14.9696C5.53235 14.9903 5.51342 14.9928 5.50093 14.9927C5.48453 14.9925 5.46297 14.9868 5.44176 14.9719C5.42055 14.9571 5.40774 14.9388 5.40196 14.9234C5.39755 14.9118 5.39344 14.8931 5.40357 14.8604L6.48443 11.3695C6.62473 10.9163 6.45873 10.4243 6.07259 10.1487L3.31567 8.1814C3.28779 8.1615 3.27977 8.14416 3.27619 8.1322C3.2715 8.11649 3.27062 8.09418 3.27852 8.0695C3.28642 8.04483 3.3001 8.02718 3.31305 8.01711C3.3229 8.00945 3.3395 8 3.37376 8H6.73268C7.21705 8 7.64442 7.68317 7.7852 7.2197L8.90432 3.53536C8.91457 3.50162 8.92874 3.48862 8.93878 3.48165C8.95224 3.47232 8.9735 3.46442 9 3.46442C9.0265 3.46442 9.04776 3.47232 9.06122 3.48165C9.07126 3.48862 9.08543 3.50162 9.09568 3.53536L10.2148 7.2197Z"
-                  stroke="#F87C09" />
-              </svg>
-              <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path
-                  d="M10.2148 7.2197C10.3556 7.68316 10.7829 8 11.2673 8H14.6287C14.6629 8 14.6795 8.00945 14.6894 8.01711C14.7024 8.02717 14.716 8.04481 14.7239 8.06947C14.7318 8.09412 14.731 8.11643 14.7263 8.13214C14.7227 8.14411 14.7147 8.16145 14.6869 8.18135L11.9341 10.1489C11.5484 10.4245 11.3828 10.9163 11.523 11.3691L12.6047 14.8628C12.6148 14.8955 12.6107 14.9141 12.6063 14.9258C12.6005 14.9412 12.5877 14.9594 12.5665 14.9743C12.5453 14.9891 12.5238 14.9949 12.5074 14.9951C12.4949 14.9952 12.4759 14.9927 12.4487 14.972L9.66527 12.8597C9.27189 12.5612 8.72778 12.5614 8.33463 12.8602L5.55961 14.9696C5.53235 14.9903 5.51342 14.9928 5.50093 14.9927C5.48453 14.9925 5.46297 14.9868 5.44176 14.9719C5.42055 14.9571 5.40774 14.9388 5.40196 14.9234C5.39755 14.9118 5.39344 14.8931 5.40357 14.8604L6.48443 11.3695C6.62473 10.9163 6.45873 10.4243 6.07259 10.1487L3.31567 8.1814C3.28779 8.1615 3.27977 8.14416 3.27619 8.1322C3.2715 8.11649 3.27062 8.09418 3.27852 8.0695C3.28642 8.04483 3.3001 8.02718 3.31305 8.01711C3.3229 8.00945 3.3395 8 3.37376 8H6.73268C7.21705 8 7.64442 7.68317 7.7852 7.2197L8.90432 3.53536C8.91457 3.50162 8.92874 3.48862 8.93878 3.48165C8.95224 3.47232 8.9735 3.46442 9 3.46442C9.0265 3.46442 9.04776 3.47232 9.06122 3.48165C9.07126 3.48862 9.08543 3.50162 9.09568 3.53536L10.2148 7.2197Z"
-                  stroke="#F87C09" />
-              </svg>
+          <div class="form-btns__label">
+            <span class="form-btns__title">Поставьте оценку</span>
+            <div class="form-btns__rating rating">
+              <input type="radio" name="rating" id="rating-input-5" class="rating__radio" value="5" required>
+              <label for="rating-input-5" class="rating__icon"></label>
+              <input type="radio" name="rating" id="rating-input-4" class="rating__radio" value="4">
+              <label for="rating-input-4" class="rating__icon"></label>
+              <input type="radio" name="rating" id="rating-input-3" class="rating__radio" value="3">
+              <label for="rating-input-3" class="rating__icon"></label>
+              <input type="radio" name="rating" id="rating-input-2" class="rating__radio" value="2">
+              <label for="rating-input-2" class="rating__icon"></label>
+              <input type="radio" name="rating" id="rating-input-1" class="rating__radio" value="1">
+              <label for="rating-input-1" class="rating__icon"></label>
             </div>
           </div>
         </div>
       </fieldset>
-      <button type="button" class="form__btn form__btn--next">Далее</button>
-      <button type="button" class="form__btn form__btn--add">Добавить книгу</button>
+      <div class="form__shell">
+        <button type="button" class="form__btn form__btn--next btn-reset" data-count="0">Далее</button>
+      </div>
     </div>
   </form>
 </section>

@@ -1,12 +1,12 @@
-import Navigo from 'navigo';
 import { animLogo } from './components/animLogo.js';
+import { formAdd } from './components/formAdd.js';
+import { routes } from './components/routesCustom.js';
 import { search } from './components/search.js';
 
-const library = document.querySelector('.library');
-const book = document.querySelector('.book');
-const addBook = document.querySelector('.book-added');
-const btnsBack = document.querySelectorAll('.header-btn--back');
-const btnsAddBook = document.querySelectorAll('.btn-add');
+
+// routes
+routes()
+// routes
 
 // Anim logo
 animLogo();
@@ -16,43 +16,9 @@ animLogo();
 search();
 // search
 
-
-const router = new Navigo('/', {
-  hash: true
-})
-router.on({
-  '/': () => {
-    closeSection(library, book, addBook);
-    library.classList.remove('hidden');
-
-  },
-  'book': () => {
-
-    closeSection(library, book, addBook);
-    book.classList.remove('hidden');
-  },
-  'add-book': () => {
-    closeSection(library, book, addBook);
-    addBook.classList.remove('hidden');
-  }
-}).resolve()
-
-btnsBack.forEach(btn => {
-  btn.addEventListener('click', () => {
-    router.navigate('/')
-  })
-})
-btnsAddBook.forEach(btn => {
-  btn.addEventListener('click', () => {
-    router.navigate('add-book')
-  })
-})
+// form add book
+formAdd()
+// form add book
 
 
-
-function closeSection(...sections) {
-  sections.forEach(section => {
-    section.classList.add('hidden');
-  })
-}
 

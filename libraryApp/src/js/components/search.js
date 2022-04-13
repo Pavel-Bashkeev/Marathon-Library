@@ -26,7 +26,7 @@ export const search = () => {
   openBtnSearch.forEach(btn => {
     btn.addEventListener('click', () =>{
       showElement(formSearch, 'search__form--active');
-      document.addEventListener('click', closeFormSearch);
+      document.addEventListener('click', closeFormSearch, true);
     })
   })
 }
