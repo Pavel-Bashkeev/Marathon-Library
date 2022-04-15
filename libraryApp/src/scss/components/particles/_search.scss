@@ -7,6 +7,7 @@
   width: 100%;
   transform: translateY(-$offsetTop - $height);
   transition: all .5s ease-in-out;
+  z-index: 5;
   &-container{
     position: relative;
     @include laptop{

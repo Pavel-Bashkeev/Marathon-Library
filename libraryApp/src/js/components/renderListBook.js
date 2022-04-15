@@ -60,7 +60,7 @@ export const renederListBooks = async () => {
 
 export const renderBook = async (idBookPage) => {
   const books = await getBooks();
-  bookContent.textContent = '';console.log();
+  bookContent.textContent = '';
   books.forEach(({ author, title, id, description, image, rating, label }) => {
     if(idBookPage === id) {
       bookContent.innerHTML = `
