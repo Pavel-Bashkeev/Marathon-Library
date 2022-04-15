@@ -104,17 +104,21 @@
   align-items: flex-start;
   gap:10px;
   &__preview{
-    display: grid;
     border-radius: 4px;
     overflow: hidden;
     width: 100px;
+    height: 143px;
     flex-shrink: 0;
+    position: relative;
   }
   &__preview-img{
     grid-area: 1/1;
   }
   &__status{
-    grid-area: 1/1;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
     padding: 5px 2px;
     border-radius: 15px;
     background-color: var(--light);

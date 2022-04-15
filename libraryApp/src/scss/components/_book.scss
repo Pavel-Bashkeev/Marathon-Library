@@ -37,8 +37,10 @@
   &__image{
     border-radius: 10px;
   }
-  .book-content__descr{
+  &__descr{
     grid-area: descr;
+    position: relative;
+    z-index: 2;
   }
   &__title {
     font: 700 26px/32px var(--font);
@@ -119,10 +121,6 @@
     grid-template-areas: 
     "preview descr"
     "btnAction .";
-  }
-  .book-content__descr{
-    position: relative;
-    z-index: 2;
   }
   .book-content__shell{
     margin: 0;

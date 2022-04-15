@@ -1,53 +1,65 @@
+import { router } from "./routesCustom.js";
+
+const form = document.querySelector('.form');
+const fieldsets = document.querySelectorAll('.form__field');
+const formBtnNext = document.querySelector('.form__btn--next');
+const formBtnBack = document.querySelectorAll('.form__btn--back');
+const btnBackPage = document.querySelector('.book-added__container .header-btn--back');
+const uploadPreview = document.querySelector('.form-upload__preview');
+const uploadPreviewSrc = uploadPreview.src;
+
+const formReset = () => {
+  form.reset();
+  count = 0;
+  formBtnNext.dataset.count = count;
+  formBtnNext.textContent = 'Далее';
+  uploadPreview.src = uploadPreviewSrc;
+  for (let fieldset of fieldsets) {
+    fieldset.classList.add('hidden')
+  }
+  fieldsets[count].classList.remove('hidden');
+}
+const sendForm = () => {
+  const data = true;
+  if (data) {
+    formReset()
+    router.navigate('/');
+  };
+}
+let count = null;
+
 export const formAdd = () => {
-
-  const form = document.querySelector('.form');
-  const fieldsets = document.querySelectorAll('.form__field');
-  const formBtnNext = document.querySelector('.form__btn--next');
-  const formBtnBack = document.querySelectorAll('.form__btn--back');
-  const btnBackPage = document.querySelector('.book-added__container .header-btn--back');
-
-  let count = null;
-
-
   formBtnNext.addEventListener('click', ({ target }) => {
     count = parseInt(target.dataset.count);
     const fieldset = fieldsets[count];
 
     let valid = true;
-    console.log('valid: ', valid);
+
     for (const element of fieldset.elements) {
       if (!element.checkValidity()) {
         element.classList.add('no-valid');
         valid = false;
-        console.log('valid: ', valid);
       } else {
         element.classList.remove('no-valid');
       };
     };
 
-    if (valid) {
-      count += 1;
-      target.dataset.count = count;
+    if (!valid) return;
 
-      if (count === fieldsets.length - 1) {
+    count += 1;
+    target.dataset.count = count;
 
-        formBtnNext.textContent = 'Добавить книгу';
-      };
-      if (count === fieldsets.length) {
-        const data = true;
-        if (data) {
-          form.reset();
-          count = 0;
-          target.dataset.count = count;
-          formBtnNext.textContent = 'Далее';
-          window.location.hash = '#/';
-        };
+    if (count === fieldsets.length - 1) {
 
-      };
-      fieldset.classList.add('hidden');
-      fieldsets[count].classList.remove('hidden');
+      formBtnNext.textContent = 'Добавить книгу';
     };
+    if (count === fieldsets.length) {
+      sendForm();
+    };
+    fieldset.classList.add('hidden');
+    fieldsets[count].classList.remove('hidden');
   });
+
   formBtnBack.forEach(item => {
     item.addEventListener('click', () => {
 
@@ -63,7 +75,6 @@ export const formAdd = () => {
       };
     });
   });
-  btnBackPage.addEventListener('click', () => {
-    form.reset();
-  });
+
+  btnBackPage.addEventListener('click', formReset);
 };

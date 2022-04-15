@@ -1,19 +1,23 @@
+const {set, timeline} = gsap;
+const topEyelid = document.querySelector('#top-eyelid')
+const bottomEyelid = document.querySelector('#bottom-eyelid')
+const pupil = document.querySelector('#pupil')
+const eyelashes = document.querySelector('#eyelashes');
+const tlEyelashes = timeline({ defaults: { repeat: -1, repeatDelay: 6, } })
+
+const topEndEyelid = "M1.75848 18.8602C12.5 18.9716 15.5 18.8602 35.6835 18.9716"
+const topStartEyelid = "M1.75848 18.8602C7.53334 12.3797 22.4031 3.32933 35.6835 18.9716"
+
+const bottomEndEyelid = "M1.75848 18.4145C11.5 18.3031 20.5 18.4145 35.6835 18.3031"
+const bottomStartEyelid = "M1.75848 18.4145C7.53334 24.895 22.4031 33.9453 35.6835 18.3031"
+
+
 export const animLogo = () => {
-  const {set, timeline} = gsap;
+  
   if (document.querySelector('#eye')) {
     // anim Eyelid
     CSSPlugin.defaultTransformPerspective = 1000;
-    const topEyelid = document.querySelector('#top-eyelid')
-    const bottomEyelid = document.querySelector('#bottom-eyelid')
-    const pupil = document.querySelector('#pupil')
-    const eyelashes = document.querySelector('#eyelashes');
-    const tlEyelashes = timeline({ defaults: { repeat: -1, repeatDelay: 6, } })
-
-    const topEndEyelid = "M1.75848 18.8602C12.5 18.9716 15.5 18.8602 35.6835 18.9716"
-    const topStartEyelid = "M1.75848 18.8602C7.53334 12.3797 22.4031 3.32933 35.6835 18.9716"
-
-    const bottomEndEyelid = "M1.75848 18.4145C11.5 18.3031 20.5 18.4145 35.6835 18.3031"
-    const bottomStartEyelid = "M1.75848 18.4145C7.53334 24.895 22.4031 33.9453 35.6835 18.3031"
+    
 
 
 
