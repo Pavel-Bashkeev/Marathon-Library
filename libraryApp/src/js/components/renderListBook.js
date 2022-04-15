@@ -33,7 +33,7 @@ export const renederListBooks = async () => {
     const item = document.createElement('li');
     item.classList.add('book-list__item');
     item.innerHTML = `
-    <a href="/#/book?id=${id}" class="book-list__link" >
+    <a href="./#/book?id=${id}" class="book-list__link" >
           <article class="cart">
             <div class="cart__preview">
               <img src="${URL_API}/${image}" alt="Обложка книги ${title}" width="100" height="148" class="cart__preview-img">
