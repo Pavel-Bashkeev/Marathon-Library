@@ -1,7 +1,8 @@
-export const URL_API = 'https://pavel-bashkeev.github.io/Marathon-Library/libraryApp/backend';
+// export const URL_API = 'https://pavel-bashkeev.github.io/Marathon-Library/libraryApp/backend';
+export const URL_API = 'https://enigmatic-dawn-73119.herokuapp.com/'
 
 export const getBooks = async () => {
-  const response = await fetch(`https://pavel-bashkeev.github.io/Marathon-Library/libraryApp/backend/db.json`)
+  const response = await fetch(`${URL_API}api/books/`)
   if (response.ok) {
     return await response.json();
   }
@@ -9,7 +10,7 @@ export const getBooks = async () => {
 }
 
 export const getLabels = async () => {
-  const response = await fetch(`https://pavel-bashkeev.github.io/Marathon-Library/libraryApp/backend/db_label.json`);
+  const response = await fetch(`${URL_API}api/labels/`);
 
   if (response.ok) {
     return await response.json();

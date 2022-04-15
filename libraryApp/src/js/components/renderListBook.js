@@ -36,7 +36,7 @@ export const renederListBooks = async () => {
     <a href="./#/book?id=${id}" class="book-list__link" >
           <article class="cart">
             <div class="cart__preview">
-              <img src="${URL_API}/${image}" alt="Обложка книги ${title}" width="100" height="148" class="cart__preview-img">
+              <img src="${URL_API}${image}" alt="Обложка книги ${title}" width="100" height="148" class="cart__preview-img">
               <span class="cart__status">
               ${labels[label]}
               </span>
@@ -65,7 +65,7 @@ export const renderBook = async (idBookPage) => {
     if(idBookPage === id) {
       bookContent.innerHTML = `
       <div class="book-content__shell">
-      <img src="${URL_API}/${image}" alt="Обложка книги ${title}" width="300" height="430" class="book-content__image">
+      <img src="${URL_API}${image}" alt="Обложка книги ${title}" width="300" height="430" class="book-content__image">
     </div>
     <div class="book-content__descr">
       <h3 class="book-content__title">
