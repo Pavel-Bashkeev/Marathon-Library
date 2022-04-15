@@ -1,7 +1,7 @@
-export const URL_API = 'http://localhost:3024';
+export const URL_API = 'https://pavel-bashkeev.github.io/Marathon-Library/libraryApp/backend';
 
-export const getBooks = async (id) => {
-  const response = await fetch(`${URL_API}/api/books/${id ? id : ''}`)
+export const getBooks = async () => {
+  const response = await fetch(`https://pavel-bashkeev.github.io/Marathon-Library/libraryApp/backend/db.json`)
   if (response.ok) {
     return await response.json();
   }
@@ -9,7 +9,7 @@ export const getBooks = async (id) => {
 }
 
 export const getLabels = async () => {
-  const response = await fetch(`${URL_API}/api/label`);
+  const response = await fetch(`https://pavel-bashkeev.github.io/Marathon-Library/libraryApp/backend/db_label.json`);
 
   if (response.ok) {
     return await response.json();
